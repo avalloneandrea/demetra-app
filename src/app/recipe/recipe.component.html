@@ -1,0 +1,27 @@
+<div class="card">
+
+  <div class="card-content">
+
+    <div class="media">
+      <div class="media-content">
+        <p class="title is-4">{{recipe?.name}}</p>
+        <p class="subtitle is-6">{{recipe?.tags?.join(", ")}}</p>
+      </div>
+    </div>
+
+    <div class="content">
+      <ul>
+        <li *ngFor="let recipeIngredient of recipe?.recipeIngredients">
+          {{recipeIngredient | recipeIngredient}}
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer class="card-footer">
+    <a href="#" class="card-footer-item">Modifica</a>
+    <a href="#" class="card-footer-item">Elimina</a>
+  </footer>
+
+</div>

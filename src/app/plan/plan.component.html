@@ -1,1 +1,6 @@
-<p>plan works!</p>
+<div class="columns is-multiline">
+  <div class="column is-half" *ngFor="let recipe of plan">
+    <recipe [recipe]="recipe"></recipe>
+  </div>
+</div>
+

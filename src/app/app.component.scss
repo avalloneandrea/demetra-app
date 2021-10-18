@@ -1,10 +1,6 @@
-@import "../../node_modules/bulma/sass/utilities/initial-variables.sass";
-
-.container {
-  max-width: 480px;
-}
+@import "../../node_modules/bulma/sass/utilities/derived-variables.sass";
 
 footer, footer * {
-  background-color: turquoise;
+  background-color: $primary;
   color: $white;
 }

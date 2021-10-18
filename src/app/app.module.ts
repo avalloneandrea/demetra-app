@@ -5,11 +5,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PlanComponent } from './plan/plan.component';
+import { RecipeComponent } from './recipe/recipe.component';
+import { RecipeIngredientPipe } from './recipe/recipe-ingredient.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PlanComponent
+    PlanComponent,
+    RecipeComponent,
+    RecipeIngredientPipe,
   ],
   imports: [
     AppRoutingModule,
