@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ListComponent } from './list/list.component';
 import { PlanComponent } from './plan/plan.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { RecipeIngredientPipe } from './recipe/recipe-ingredient.pipe';
@@ -11,6 +12,7 @@ import { RecipeIngredientPipe } from './recipe/recipe-ingredient.pipe';
 @NgModule({
   declarations: [
     AppComponent,
+    ListComponent,
     PlanComponent,
     RecipeComponent,
     RecipeIngredientPipe,

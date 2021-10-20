@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { Recipe } from '../domain/Recipe';
 
@@ -12,10 +12,14 @@ export class PlanComponent implements OnInit {
 
   plan: Array<Recipe> = [ ];
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.plan = this.route.snapshot.data.plan;
+  }
+
+  list(): void {
+    this.router.navigate([ 'list' ], { queryParams: { recipes: this.plan.map(recipe => recipe.id) }});
   }
 
 }

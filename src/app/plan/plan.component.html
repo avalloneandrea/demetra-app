@@ -1,6 +1,8 @@
-<div class="columns is-multiline">
+<div class="columns is-multiline is-centered">
   <div class="column is-half" *ngFor="let recipe of plan">
     <recipe [recipe]="recipe"></recipe>
   </div>
+  <button class="button is-primary is-large" (click)="list()">
+    Genera lista
+  </button>
 </div>
-
