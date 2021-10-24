@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 
 import { Recipe } from '../domain/Recipe';
+import { RecipeModalComponent } from "../recipe-modal/recipe-modal.component";
 
 @Component({
   selector: 'recipe',
@@ -12,8 +13,14 @@ export class RecipeComponent implements OnInit {
   @Input()
   recipe: Recipe = { };
 
+  @ViewChild('modal') modal!: RecipeModalComponent;
+
   constructor() { }
 
   ngOnInit(): void { }
+
+  showModal() {
+    this.modal.activate();
+  }
 
 }

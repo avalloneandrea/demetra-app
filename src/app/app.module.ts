@@ -8,6 +8,7 @@ import { ListComponent } from './list/list.component';
 import { PlanComponent } from './plan/plan.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { RecipeIngredientPipe } from './recipe/recipe-ingredient.pipe';
+import { RecipeModalComponent } from './recipe-modal/recipe-modal.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { RecipeIngredientPipe } from './recipe/recipe-ingredient.pipe';
     PlanComponent,
     RecipeComponent,
     RecipeIngredientPipe,
+    RecipeModalComponent,
   ],
   imports: [
     AppRoutingModule,

@@ -11,7 +11,7 @@
 
     <div class="content">
       <ul>
-        <li *ngFor="let recipeIngredient of recipe?.recipeIngredients">
+        <li *ngFor="let recipeIngredient of recipe?.ingredients">
           {{recipeIngredient | recipeIngredient}}
         </li>
       </ul>
@@ -20,8 +20,10 @@
   </div>
 
   <footer class="card-footer">
-    <a class="card-footer-item">Modifica</a>
+    <a class="card-footer-item" (click)="showModal()">Modifica</a>
     <a class="card-footer-item">Elimina</a>
   </footer>
+
+  <recipe-modal #modal></recipe-modal>
 
 </div>

@@ -1,0 +1,19 @@
+<div class="modal" [class.is-active]="isActive">
+  <div class="modal-background" (click)="deactivate()"></div>
+  <div class="modal-card">
+    <section class="modal-card-body">
+
+      <div class="control has-icons-right">
+        <input #input class="input is-white is-large" type="text" placeholder="Ricerca ricette">
+        <span class="icon is-medium is-right">
+          <i class="fas fa-search"></i>
+        </span>
+      </div>
+
+      <label class="panel-block" *ngFor="let ni of recipes">
+        {{ni.name}}
+      </label>
+
+    </section>
+  </div>
+</div>
