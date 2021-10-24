@@ -1,0 +1,35 @@
+<form class="container" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <div class="field">
+    <label class="label">Numero di giorni</label>
+    <div class="control has-icons-left">
+      <input class="input is-primary is-medium" inputMode="decimal" type="number" min="1" formControlName="days">
+      <span class="icon is-left has-text-primary">
+        <i class="far fa-fw fa-calendar-alt"></i>
+      </span>
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Numero di persone</label>
+    <div class="control has-icons-left">
+      <input class="input is-primary is-medium" inputMode="decimal" type="number" min="1" formControlName="people">
+      <span class="icon is-left has-text-primary">
+        <i class="far fa-fw fa-user"></i>
+      </span>
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">&nbsp;</label>
+    <div class="control">
+      <button class="button is-primary is-medium is-fullwidth" type="submit" [class.is-loading]="form.disabled">
+        <span class="icon is-left">
+          <i class="far fa-fw fa-heart"></i>
+        </span>
+        <strong>Elabora</strong>
+      </button>
+    </div>
+  </div>
+
+</form>
