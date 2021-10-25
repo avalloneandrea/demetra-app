@@ -10,5 +10,10 @@ import packageInfo from '../../package.json';
 export class AppComponent {
 
   appVersion: string = packageInfo.version;
+  isActive: boolean = false;
+
+  activate() {
+    this.isActive = !this.isActive;
+  }
 
 }
