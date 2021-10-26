@@ -20,7 +20,7 @@ export class PlanDashboardComponent {
 
   onSubmit(): void {
     this.form.disable();
-    this.router.navigate([ 'plan' ], {queryParams: this.form.value});
+    this.router.navigate([ 'plan-editor' ], {queryParams: this.form.value});
   }
 
 }
