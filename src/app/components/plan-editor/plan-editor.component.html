@@ -1,5 +1,5 @@
 <div class="columns is-multiline is-centered">
   <div class="column is-half" *ngFor="let recipe of plan">
-    <recipe [recipe]="recipe"></recipe>
+    <recipe-card [recipe]="recipe" (replace)="onReplace(recipe, $event)" (delete)="onDelete(recipe)"></recipe-card>
   </div>
 </div>

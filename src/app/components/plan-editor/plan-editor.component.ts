@@ -10,10 +10,20 @@ import { Recipe } from '../../domain/Recipe';
 })
 export class PlanEditorComponent {
 
-  plan: Array<Recipe> = [];
+  plan: Array<Recipe>;
 
   constructor(private route: ActivatedRoute) {
     this.plan = this.route.snapshot.data.plan;
+  }
+
+  onReplace(prev: Recipe, next: Recipe) {
+    const index = this.plan.findIndex(recipe => recipe.id === prev.id);
+    this.plan[index] = next;
+  }
+
+  onDelete(prev: Recipe) {
+    const index = this.plan.findIndex(recipe => recipe.id === prev.id);
+    this.plan[index] = {name: "placeholder"}; // TODO TBD
   }
 
 }

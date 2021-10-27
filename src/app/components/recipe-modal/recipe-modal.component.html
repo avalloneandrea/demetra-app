@@ -1,0 +1,21 @@
+<div class="modal" [class.is-active]="isActive">
+  <div class="modal-background" (click)="deactivate()"></div>
+  <div class="modal-content has-background-white">
+    <nav class="panel">
+
+      <div class="panel-block">
+        <div class="control has-icons-left">
+          <input class="input is-white is-large" type="text" placeholder="Ricerca ricette" [formControl]="query">
+          <span class="icon is-left has-text-primary">
+            <i class="fas fa-search"></i>
+          </span>
+        </div>
+      </div>
+
+      <label class="panel-block" *ngFor="let recipe of recipes$ | async" (click)="onClick(recipe)">
+        {{recipe?.name}}
+      </label>
+
+    </nav>
+  </div>
+</div>

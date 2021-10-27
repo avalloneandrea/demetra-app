@@ -1,7 +1,6 @@
 <div class="card">
 
   <div class="card-content">
-
     <div class="media">
       <div class="media-content">
         <p class="title is-4">{{recipe?.name}}</p>
@@ -16,14 +15,13 @@
         </li>
       </ul>
     </div>
-
   </div>
 
   <footer class="card-footer">
-    <a class="card-footer-item" (click)="showModal()">Modifica</a>
-    <a class="card-footer-item">Elimina</a>
+    <a class="card-footer-item" (click)="activate()">Sostituisci</a>
+    <a class="card-footer-item" (click)="onDelete()">Elimina</a>
   </footer>
 
-  <recipe-modal #modal></recipe-modal>
+  <recipe-modal #modal (select)="onReplace($event)"></recipe-modal>
 
 </div>
