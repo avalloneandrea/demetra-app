@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { debounceTime, distinctUntilChanged, EMPTY, filter, Observable, switchMap } from 'rxjs';
 
@@ -11,6 +11,9 @@ import { RecipeService } from '../../recipe.service';
   styleUrls: [ './recipe-modal.component.scss' ]
 })
 export class RecipeModalComponent {
+
+  @ViewChild('input')
+  input!: ElementRef;
 
   isActive: boolean;
   query: FormControl;
@@ -26,6 +29,7 @@ export class RecipeModalComponent {
   }
 
   activate(): void {
+    setTimeout(() => this.input.nativeElement.focus());
     this.isActive = true;
     this.query.setValue('');
     this.recipes$ = this.query.valueChanges.pipe(
