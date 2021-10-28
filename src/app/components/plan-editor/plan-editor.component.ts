@@ -1,10 +1,10 @@
 import { Component, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { map, Observable, switchMap } from 'rxjs';
+import { switchMap } from 'rxjs';
 
 import { Recipe } from '../../domain/Recipe';
 import { RecipeIngredient } from '../../domain/RecipeIngredient';
-import { ListService } from '../../list/list.service';
+import { ListService } from '../../services/list/list.service';
 
 @Component({
   selector: 'plan-editor',
@@ -14,20 +14,15 @@ import { ListService } from '../../list/list.service';
 export class PlanEditorComponent {
 
   plan: Array<Recipe>;
-  list$: Observable<Array<RecipeIngredient>>;
-
+  list: Array<RecipeIngredient>;
   change = new EventEmitter<Array<Recipe>>();
 
   constructor(private route: ActivatedRoute, private listService: ListService) {
-    this.plan = this.route.snapshot.data.plan;
-    this.list$ = this.change.pipe(
-      map(recipes => recipes.filter(recipe => recipe.id).map(r => r.id!)),
-      switchMap(recipes => this.listService.getList({recipes}))
-    );
-  }
-
-  ngAfterViewInit(): void {
-    this.change.emit(this.plan);
+    this.plan = this.route.snapshot.data.planAndList.plan;
+    this.list = this.route.snapshot.data.planAndList.list;
+    this.change
+      .pipe(switchMap(recipes => this.listService.getList({recipes})))
+      .subscribe(list => this.list = list);
   }
 
   onReplace(prev: Recipe, next: Recipe) {

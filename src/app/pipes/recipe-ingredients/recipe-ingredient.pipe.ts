@@ -1,14 +1,13 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-import { NecessaryIngredient } from '../domain/NecessaryIngredient';
-import { RecipeIngredient } from '../domain/RecipeIngredient';
+import { RecipeIngredient } from '../../domain/RecipeIngredient';
 
 @Pipe({
   name: 'recipeIngredient'
 })
 export class RecipeIngredientPipe implements PipeTransform {
 
-  transform(value: RecipeIngredient | NecessaryIngredient, ...args: unknown[]): string {
+  transform(value: RecipeIngredient): string {
 
     const quantity = value?.quantity || '';
     const unit = value?.ingredient?.unit || '';

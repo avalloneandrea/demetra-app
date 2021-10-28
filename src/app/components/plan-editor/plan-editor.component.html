@@ -8,7 +8,8 @@
   </div>
   <div class="column is-one-third">
     <div class="panel">
-      <label class="panel-block" *ngFor="let ri of list$ | async">
+      <div class="panel-heading">Lista della spesa</div>
+      <label class="panel-block" *ngFor="let ri of list">
         <input type="checkbox" disabled>
         {{ri | recipeIngredient}}
       </label>

@@ -3,7 +3,7 @@ import { FormControl } from '@angular/forms';
 import { debounceTime, distinctUntilChanged, EMPTY, filter, Observable, switchMap } from 'rxjs';
 
 import { Recipe } from '../../domain/Recipe';
-import { RecipeService } from '../../recipe.service';
+import { RecipeService } from '../../services/recipe/recipe.service';
 
 @Component({
   selector: 'recipe-modal',
