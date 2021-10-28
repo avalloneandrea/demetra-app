@@ -1,5 +1,17 @@
-<div class="columns is-multiline is-centered">
-  <div class="column is-half" *ngFor="let recipe of plan">
-    <recipe-card [recipe]="recipe" (replace)="onReplace(recipe, $event)" (delete)="onDelete(recipe)"></recipe-card>
+<div class="columns">
+  <div class="column">
+    <div class="columns is-multiline is-centered">
+      <div class="column is-half" *ngFor="let recipe of plan">
+        <recipe-card [recipe]="recipe" (replace)="onReplace(recipe, $event)" (delete)="onDelete(recipe)"></recipe-card>
+      </div>
+    </div>
+  </div>
+  <div class="column is-one-third">
+    <div class="panel">
+      <label class="panel-block" *ngFor="let ri of list$ | async">
+        <input type="checkbox" disabled>
+        {{ri | recipeIngredient}}
+      </label>
+    </div>
   </div>
 </div>
