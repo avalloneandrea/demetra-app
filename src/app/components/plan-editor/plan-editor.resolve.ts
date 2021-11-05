@@ -15,7 +15,7 @@ export class PlanEditorResolve implements Resolve<Array<Recipe>> {
 
   resolve(route: ActivatedRouteSnapshot): Observable<any> {
     return this.planService.getPlan(route.queryParams).pipe(
-      switchMap((recipes: Array<Recipe>) => forkJoin([ of(recipes), this.listService.getList({recipes}) ])),
+      switchMap((recipes: Array<Recipe>) => forkJoin([ of(recipes), this.listService.getList(Object.assign({}, {recipes}, route.queryParams)) ])),
       map(([ plan, list ]) => ({plan, list})),
       take(1));
   }

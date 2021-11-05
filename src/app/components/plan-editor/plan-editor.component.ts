@@ -21,7 +21,7 @@ export class PlanEditorComponent {
     this.plan = this.route.snapshot.data.planAndList.plan;
     this.list = this.route.snapshot.data.planAndList.list;
     this.change
-      .pipe(switchMap(recipes => this.listService.getList({recipes})))
+      .pipe(switchMap(recipes => this.listService.getList(Object.assign({}, {recipes}, this.route.snapshot.queryParams))))
       .subscribe(list => this.list = list);
   }
 
