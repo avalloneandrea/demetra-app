@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { DragulaModule } from "ng2-dragula";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +24,7 @@ import { RecipeIngredientPipe } from './pipes/recipe-ingredients/recipe-ingredie
   imports: [
     AppRoutingModule,
     BrowserModule,
+    DragulaModule.forRoot(),
     HttpClientModule,
     ReactiveFormsModule,
   ],

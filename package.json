@@ -1,6 +1,6 @@
 {
   "name": "demetra-app",
-  "version": "1.1.11",
+  "version": "1.2.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -20,6 +20,7 @@
     "@angular/router": "~12.2.10",
     "@fortawesome/fontawesome-free": "~5.15.4",
     "bulma": "~0.9.3",
+    "ng2-dragula": "^2.1.1",
     "rxjs": "~7.4.0",
     "tslib": "~2.3.1",
     "zone.js": "~0.11.4"

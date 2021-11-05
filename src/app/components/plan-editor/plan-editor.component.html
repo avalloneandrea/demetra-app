@@ -1,6 +1,6 @@
 <div class="columns">
   <div class="column">
-    <div class="columns is-multiline is-centered">
+    <div class="columns is-multiline is-centered" dragula="plan" [(dragulaModel)]="plan">
       <div class="column is-half" *ngFor="let recipe of plan">
         <recipe-card [recipe]="recipe" (replace)="onReplace(recipe, $event)" (delete)="onDelete(recipe)"></recipe-card>
       </div>
@@ -9,10 +9,12 @@
   <div class="column is-one-third">
     <div class="panel">
       <div class="panel-heading">Lista della spesa</div>
-      <label class="panel-block" *ngFor="let ri of list">
-        <input type="checkbox" disabled>
-        {{ri | recipeIngredient}}
-      </label>
+      <div dragula="list" [(dragulaModel)]="list">
+        <label class="panel-block" *ngFor="let ri of list">
+          <input type="checkbox" disabled>
+          {{ri | recipeIngredient}}
+        </label>
+      </div>
     </div>
   </div>
 </div>
