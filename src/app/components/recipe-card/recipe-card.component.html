@@ -3,7 +3,7 @@
   <div class="card-content">
     <div class="media">
       <div class="media-content">
-        <p class="title is-4">{{recipe?.name}}</p>
+        <p class="title is-4 has-text-primary is-small-caps has-text-weight-light">{{recipe?.name}}</p>
         <p class="subtitle is-6">{{recipe?.tags?.join(", ")}}</p>
       </div>
     </div>
@@ -18,8 +18,8 @@
   </div>
 
   <footer class="card-footer">
-    <a class="card-footer-item" (click)="activate()">Sostituisci</a>
-    <a class="card-footer-item" (click)="onDelete()">Elimina</a>
+    <a class="card-footer-item has-text-grey-dark" (click)="activate()">Sostituisci</a>
+    <a class="card-footer-item has-text-grey-dark" (click)="onDelete()">Elimina</a>
   </footer>
 
   <recipe-modal #modal (select)="onReplace($event)"></recipe-modal>
