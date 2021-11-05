@@ -2,7 +2,8 @@
   <div class="column">
     <div class="columns is-multiline is-centered" dragula="plan" [(dragulaModel)]="plan">
       <div class="column is-half" *ngFor="let recipe of plan">
-        <recipe-card [recipe]="recipe" (replace)="onReplace(recipe, $event)" (delete)="onDelete(recipe)"></recipe-card>
+        <recipe-card *ngIf="recipe?.id" [recipe]="recipe" (replace)="onReplace(recipe, $event)" (delete)="onDelete(recipe)"></recipe-card>
+        <empty-card *ngIf="!recipe?.id" (replace)="onReplace(recipe, $event)"></empty-card>
       </div>
     </div>
   </div>

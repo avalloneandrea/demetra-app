@@ -33,7 +33,7 @@ export class PlanEditorComponent {
 
   onDelete(prev: Recipe) {
     const index = this.plan.findIndex(recipe => recipe.id === prev.id);
-    this.plan[index] = {name: 'placeholder'}; // TODO TBD
+    this.plan[index] = {};
     this.change.emit(this.plan);
   }
 
