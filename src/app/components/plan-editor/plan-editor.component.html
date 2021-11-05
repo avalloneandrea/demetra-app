@@ -1,21 +1,23 @@
-<div class="columns">
-  <div class="column">
-    <div class="columns is-multiline is-centered" dragula="plan" [(dragulaModel)]="plan">
+<div class="columns is-desktop">
+
+  <div class="column is-two-thirds-desktop">
+    <div class="columns is-multiline" dragula="plan" [(dragulaModel)]="plan">
       <div class="column is-half" *ngFor="let recipe of plan">
         <recipe-card *ngIf="recipe?.id" [recipe]="recipe" (replace)="onReplace(recipe, $event)" (delete)="onDelete(recipe)"></recipe-card>
         <empty-card *ngIf="!recipe?.id" (replace)="onReplace(recipe, $event)"></empty-card>
       </div>
     </div>
   </div>
-  <div class="column is-one-third">
+
+  <div class="column is-one-third-desktop">
     <div class="panel">
       <div class="panel-heading">Lista della spesa</div>
       <div dragula="list" [(dragulaModel)]="list">
         <label class="panel-block" *ngFor="let ri of list">
-          <input type="checkbox" disabled>
-          {{ri | recipeIngredient}}
+          <input type="checkbox" disabled> {{ri | recipeIngredient}}
         </label>
       </div>
     </div>
   </div>
+
 </div>
