@@ -4,7 +4,8 @@ export interface Recipe {
 
   id?: number;
   name?: string;
-  tags?: Array<string>;
+  reference?: string;
   ingredients?: Array<RecipeIngredient>;
+  categories?: Array<string>;
 
 }
