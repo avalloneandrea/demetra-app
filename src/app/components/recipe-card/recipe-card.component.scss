@@ -1,0 +1,9 @@
+@import "~src/styles";
+
+.card-footer-item {
+  color: $grey-dark;
+}
+
+.card-footer-item:hover {
+  color: $primary;
+}

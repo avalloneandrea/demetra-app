@@ -1,13 +1,13 @@
 <div class="card">
 
-  <div class="card-image" (click)="activate()">
+  <div class="card-image" (click)="onClick()">
     <figure class="image is-square">
-      <span class="icon title">
-        <i class="fas fa-plus"></i>
+      <span class="icon">
+        <i class="fas fa-fw fa-plus fa-2x"></i>
       </span>
     </figure>
   </div>
 
-  <recipe-modal #modal (select)="onReplace($event)"></recipe-modal>
+  <recipe-modal #modal (select)="onSelect($event)"></recipe-modal>
 
 </div>

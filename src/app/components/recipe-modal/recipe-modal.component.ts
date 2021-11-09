@@ -40,13 +40,13 @@ export class RecipeModalComponent {
     );
   }
 
-  deactivate(): void {
+  onClose(): void {
     this.isActive = false;
   }
 
   onClick(recipe: Recipe): void {
-    this.select.emit(recipe);
     this.isActive = false;
+    this.select.emit(recipe);
   }
 
 }

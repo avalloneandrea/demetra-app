@@ -1,12 +1,12 @@
-<nav class="navbar is-primary is-spaced is-fixed-top has-shadow">
+<nav class="navbar is-fixed-top is-primary is-spaced has-shadow">
   <div class="navbar-brand">
     <a class="navbar-item" href="/">
       <img alt="Demetra" src="assets/images/logo-inverted.png">
     </a>
-    <a class="navbar-burger" [class.is-active]="isActive" (click)="activate()">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
+    <a class="navbar-burger" [class.is-active]="isActive" (click)="onClick()">
+      <span></span>
+      <span></span>
+      <span></span>
     </a>
   </div>
   <div class="navbar-menu" [class.is-active]="isActive">
@@ -24,9 +24,9 @@
   </div>
 </section>
 
-<footer class="footer is-primary">
+<footer class="footer">
   <div class="content has-text-centered">
-    <a href="https://github.com/avalloneandrea/demetra-app"><strong>Demetra</strong> {{appVersion}} by Andrea Avallone</a><br>
-    <a href="https://github.com/avalloneandrea/demetra-app/blob/master/LICENSE">Demetra is licensed under the MIT License</a>
+    <a class="has-text-white" href="https://github.com/avalloneandrea/demetra-app"><strong>Demetra</strong> {{appVersion}} by Andrea Avallone</a><br>
+    <a class="has-text-white" href="https://github.com/avalloneandrea/demetra-app/blob/master/LICENSE">Demetra is licensed under the MIT License</a>
   </div>
 </footer>

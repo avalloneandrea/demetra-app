@@ -11,7 +11,7 @@ import { Recipe } from '../../domain/Recipe';
 export class RecipeCardComponent {
 
   @Input()
-  recipe?: Recipe;
+  recipe!: Recipe;
 
   @ViewChild('modal')
   modal!: RecipeModalComponent;
@@ -22,16 +22,16 @@ export class RecipeCardComponent {
   @Output()
   delete = new EventEmitter<Recipe>();
 
-  activate() {
+  onReplace() {
     this.modal.activate();
+  }
+
+  onSelect(next: Recipe) {
+    this.replace.emit(next);
   }
 
   onDelete() {
     this.delete.emit();
-  }
-
-  onReplace(next: Recipe) {
-    this.replace.emit(next);
   }
 
 }

@@ -1,9 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "~bulma/css/bulma.css";
-@import "~@fortawesome/fontawesome-free/css/all.css";
-@import "~dragula/dist/dragula.css";
+$primary: hsl(111, 27%, 44%);
+$footer-background-color: $primary;
 
-.is-small-caps {
-  font-variant: small-caps;
-}
+@import "~bulma/bulma";
+@import "~@fortawesome/fontawesome-free/css/all";
+@import "~dragula/dist/dragula";

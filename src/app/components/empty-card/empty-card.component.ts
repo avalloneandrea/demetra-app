@@ -16,11 +16,11 @@ export class EmptyCardComponent {
   @Output()
   replace = new EventEmitter<Recipe>();
 
-  activate() {
+  onClick() {
     this.modal.activate();
   }
 
-  onReplace(next: Recipe) {
+  onSelect(next: Recipe) {
     this.replace.emit(next);
   }
 
