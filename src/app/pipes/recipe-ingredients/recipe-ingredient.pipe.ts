@@ -20,7 +20,7 @@ export class RecipeIngredientPipe implements PipeTransform {
       return `${ quantity } ${ name.toLowerCase() }`;
 
     if (unit === 'd')
-      return `${ quantity } dose di ${ name.toLowerCase() }`;
+      return `${ quantity } ${ quantity === 1 ? 'dose' : 'dosi' } di ${ name.toLowerCase() }`;
 
     if (unit === 'qb')
       return `${ name } q.b.`;

@@ -6,6 +6,7 @@ import { DragulaModule } from "ng2-dragula";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CategoryTagsComponent } from './components/category-tags/category-tags.component';
 import { EmptyCardComponent } from './components/empty-card/empty-card.component';
 import { PlanDashboardComponent } from './components/plan-dashboard/plan-dashboard.component';
 import { PlanEditorComponent } from './components/plan-editor/plan-editor.component';
@@ -16,6 +17,7 @@ import { RecipeIngredientPipe } from './pipes/recipe-ingredients/recipe-ingredie
 @NgModule({
   declarations: [
     AppComponent,
+    CategoryTagsComponent,
     EmptyCardComponent,
     PlanDashboardComponent,
     PlanEditorComponent,
