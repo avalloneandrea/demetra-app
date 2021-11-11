@@ -16,11 +16,21 @@ export class RecipeCardComponent {
   @ViewChild('modal')
   modal!: RecipeModalComponent;
 
+  isActive: boolean;
+
   @Output()
   replace = new EventEmitter<Recipe>();
 
   @Output()
   delete = new EventEmitter<Recipe>();
+
+  constructor() {
+    this.isActive = false;
+  }
+
+  onClick() {
+    this.isActive = !this.isActive
+  }
 
   onReplace() {
     this.modal.activate();
