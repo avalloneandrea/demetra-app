@@ -1,10 +1,11 @@
 {
   "name": "demetra-app",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "serve": "ng serve",
+    "start": "node server.js",
+    "build": "ng build --aot --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -20,7 +21,8 @@
     "@angular/router": "~12.2.10",
     "@fortawesome/fontawesome-free": "~5.15.4",
     "bulma": "~0.9.3",
-    "ng2-dragula": "^2.1.1",
+    "express": "~4.17.1",
+    "ng2-dragula": "~2.1.1",
     "rxjs": "~7.4.0",
     "tslib": "~2.3.1",
     "zone.js": "~0.11.4"
