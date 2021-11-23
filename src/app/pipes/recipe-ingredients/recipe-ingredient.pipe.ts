@@ -14,16 +14,16 @@ export class RecipeIngredientPipe implements PipeTransform {
     const quantity = value?.quantity || '';
 
     if (unit === 'g')
-      return `${ quantity } ${ unit } ${ $localize `of` } ${ name.toLowerCase() }`;
+      return `${quantity} ${unit} ${$localize`of`} ${name.toLowerCase()}`;
 
     if (unit === 'u')
-      return `${ quantity } ${ name.toLowerCase() }`;
+      return `${quantity} ${name.toLowerCase()}`;
 
     if (unit === 'd')
-      return `${ quantity } ${ quantity === 1 ? $localize `dose` : $localize `doses` } ${ $localize `of` } ${name.toLowerCase()}`;
+      return `${quantity} ${quantity === 1 ? $localize`dose` : $localize`doses`} ${$localize`of`} ${name.toLowerCase()}`;
 
     if (unit === 'qb')
-      return `${ name } ${ unit }`;
+      return `${name} ${unit}`;
 
     return '';
 

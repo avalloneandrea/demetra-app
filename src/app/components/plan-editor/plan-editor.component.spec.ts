@@ -10,7 +10,7 @@ describe('PlanEditorComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ PlanEditorComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

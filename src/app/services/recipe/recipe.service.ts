@@ -12,13 +12,13 @@ export class RecipeService {
 
   constructor(protected httpClient: HttpClient) { }
 
-  getRecipes(query = '' ): Observable<Array<Recipe>> {
+  getRecipes(query = ''): Observable<Array<Recipe>> {
     const params = new HttpParams()
       .set('query', query);
     const headers = new HttpHeaders()
       .set('Accept', [ 'application/json' ]);
     return this.httpClient.get<Array<Recipe>>(
-      `${ environment.basePath }/recipe`,
+      `${environment.basePath}/recipe`,
       { params, headers });
   }
 

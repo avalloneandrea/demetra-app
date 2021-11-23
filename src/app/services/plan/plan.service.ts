@@ -12,7 +12,7 @@ export class PlanService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getPlan({days = 7, people = 2}): Observable<Array<Recipe>> {
+  getPlan({ days = 7, people = 2 }): Observable<Array<Recipe>> {
     const params = new HttpParams()
       .set('days', days)
       .set('people', people);
@@ -20,7 +20,7 @@ export class PlanService {
       .set('Accept', [ 'application/json' ]);
     return this.httpClient.get<Array<Recipe>>(
       `${environment.basePath}/plan`,
-      {params, headers});
+      { params, headers });
   }
 
 }

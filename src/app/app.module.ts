@@ -35,4 +35,4 @@ import { RecipeIngredientPipe } from './pipes/recipe-ingredients/recipe-ingredie
   providers: [],
   bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {}

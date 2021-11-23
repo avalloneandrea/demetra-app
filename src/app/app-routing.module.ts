@@ -6,9 +6,9 @@ import { PlanEditorComponent } from './components/plan-editor/plan-editor.compon
 import { PlanEditorResolve } from './components/plan-editor/plan-editor.resolve';
 
 const routes: Routes = [
-  {path: 'plan-dashboard', component: PlanDashboardComponent},
-  {path: 'plan-editor', component: PlanEditorComponent, resolve: {planAndList: PlanEditorResolve}},
-  {path: '**', redirectTo: 'plan-dashboard', pathMatch: 'full'}
+  { path: 'plan-dashboard', component: PlanDashboardComponent },
+  { path: 'plan-editor', component: PlanEditorComponent, resolve: { planAndList: PlanEditorResolve } },
+  { path: '**', redirectTo: 'plan-dashboard', pathMatch: 'full' }
 ];
 
 @NgModule({

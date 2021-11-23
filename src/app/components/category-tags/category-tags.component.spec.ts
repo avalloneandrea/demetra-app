@@ -10,7 +10,7 @@ describe('CategoryTagsComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ CategoryTagsComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

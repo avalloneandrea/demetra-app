@@ -10,7 +10,7 @@ describe('EmptyCardComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ EmptyCardComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

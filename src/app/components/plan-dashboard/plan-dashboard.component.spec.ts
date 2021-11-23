@@ -10,7 +10,7 @@ describe('PlanDashboardComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ PlanDashboardComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
