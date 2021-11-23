@@ -14,8 +14,8 @@
   </div>
 
   <footer class="card-footer">
-    <a class="card-footer-item" (click)="onReplace()">Sostituisci</a>
-    <a class="card-footer-item" (click)="onDelete()">Elimina</a>
+    <a class="card-footer-item" (click)="onReplace()" i18n>Replace</a>
+    <a class="card-footer-item" (click)="onDelete()" i18n>Delete</a>
   </footer>
 
   <recipe-modal #modal (select)="onSelect($event)"></recipe-modal>

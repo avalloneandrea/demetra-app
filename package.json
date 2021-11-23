@@ -1,11 +1,11 @@
 {
   "name": "demetra-app",
-  "version": "1.2.11",
+  "version": "1.2.12",
   "scripts": {
     "ng": "ng",
     "serve": "ng serve",
     "start": "node server.js",
-    "build": "ng build --aot --configuration production",
+    "build": "ng build --aot --localize --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -31,6 +31,7 @@
     "@angular-devkit/build-angular": "~13.0.3",
     "@angular/cli": "~13.0.3",
     "@angular/compiler-cli": "~13.0.2",
+    "@angular/localize": "~13.0.2",
     "@types/jasmine": "~3.10.2",
     "@types/node": "~16.11.9",
     "jasmine-core": "~3.10.1",

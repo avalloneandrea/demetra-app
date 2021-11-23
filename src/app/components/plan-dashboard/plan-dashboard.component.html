@@ -1,7 +1,7 @@
 <form class="container is-max-desktop" [formGroup]="form" (ngSubmit)="onSubmit()">
 
   <div class="field">
-    <label class="label">Numero di giorni</label>
+    <label class="label" i18n>Number of days</label>
     <div class="control has-icons-left">
       <input class="input is-primary is-medium" inputMode="decimal" type="number" min="1" formControlName="days">
       <span class="icon is-left has-text-primary">
@@ -11,7 +11,7 @@
   </div>
 
   <div class="field">
-    <label class="label">Numero di persone</label>
+    <label class="label" i18n>Number of people</label>
     <div class="control has-icons-left">
       <input class="input is-primary is-medium" inputMode="decimal" type="number" min="1" formControlName="people">
       <span class="icon is-left has-text-primary">
@@ -27,7 +27,7 @@
         <span class="icon">
           <i class="far fa-fw fa-file-alt"></i>
         </span>
-        <strong>Elabora</strong>
+        <strong i18n>Submit</strong>
       </button>
     </div>
   </div>

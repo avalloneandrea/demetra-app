@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="3320978972962468804" datatype="html">
+        <source>Meal plan</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5653950008918231077" datatype="html">
+        <source>Number of days</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/plan-dashboard/plan-dashboard.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4582110845693319362" datatype="html">
+        <source>Number of people</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/plan-dashboard/plan-dashboard.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="935187492052582731" datatype="html">
+        <source>Submit</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/plan-dashboard/plan-dashboard.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1591591571615068585" datatype="html">
+        <source>Shopping list</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/plan-editor/plan-editor.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6254459922754143568" datatype="html">
+        <source>Replace</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/recipe-card/recipe-card.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7022070615528435141" datatype="html">
+        <source>Delete</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/recipe-card/recipe-card.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5881876145178332550" datatype="html">
+        <source>of</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pipes/recipe-ingredients/recipe-ingredient.pipe.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pipes/recipe-ingredients/recipe-ingredient.pipe.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="208154706367700747" datatype="html">
+        <source>dose</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pipes/recipe-ingredients/recipe-ingredient.pipe.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5695286003469480666" datatype="html">
+        <source>doses</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pipes/recipe-ingredients/recipe-ingredient.pipe.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
