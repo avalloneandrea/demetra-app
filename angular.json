@@ -17,6 +17,7 @@
       "sourceRoot": "src",
       "prefix": "",
       "i18n": {
+        "sourceLocale": "en",
         "locales": {
           "it": "src/locale/messages.it.xlf"
         }
