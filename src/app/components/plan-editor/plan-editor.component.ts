@@ -1,7 +1,9 @@
+import { query, transition, trigger, useAnimation } from '@angular/animations';
 import { Component, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs';
 
+import { fadeIn } from '../../app-animations';
 import { Recipe } from '../../domain/Recipe';
 import { RecipeIngredient } from '../../domain/RecipeIngredient';
 import { ListService } from '../../services/list/list.service';
@@ -9,7 +11,11 @@ import { ListService } from '../../services/list/list.service';
 @Component({
   selector: 'plan-editor',
   templateUrl: './plan-editor.component.html',
-  styleUrls: [ './plan-editor.component.scss' ]
+  styleUrls: [ './plan-editor.component.scss' ],
+  animations: [ trigger('animate', [
+    transition(':enter', [
+      query('.card, .panel', [
+        useAnimation(fadeIn) ]) ]) ]) ]
 })
 export class PlanEditorComponent {
 
