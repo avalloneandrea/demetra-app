@@ -23,7 +23,7 @@ export class ListService {
           .flat()
       });
     const headers = new HttpHeaders()
-      .set('Accept', [ 'application/json' ]);
+      .set('Accept', 'application/json');
     return this.httpClient.get<Array<RecipeIngredient>>(
       `${environment.basePath}/list`,
       { params, headers });

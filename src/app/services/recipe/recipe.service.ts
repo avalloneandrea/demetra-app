@@ -16,7 +16,7 @@ export class RecipeService {
     const params = new HttpParams()
       .set('query', query);
     const headers = new HttpHeaders()
-      .set('Accept', [ 'application/json' ]);
+      .set('Accept', 'application/json');
     return this.httpClient.get<Array<Recipe>>(
       `${environment.basePath}/recipe`,
       { params, headers });

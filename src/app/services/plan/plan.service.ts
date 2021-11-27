@@ -17,7 +17,7 @@ export class PlanService {
       .set('days', days)
       .set('people', people);
     const headers = new HttpHeaders()
-      .set('Accept', [ 'application/json' ]);
+      .set('Accept', 'application/json');
     return this.httpClient.get<Array<Recipe>>(
       `${environment.basePath}/plan`,
       { params, headers });
