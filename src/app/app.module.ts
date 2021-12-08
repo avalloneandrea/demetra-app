@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DragulaModule } from "ng2-dragula";
+import { DragulaModule } from 'ng2-dragula';
+import { NgxLoginWithAmazonButtonModule } from 'ngx-login-with-amazon-button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,8 @@ import { PlanEditorComponent } from './components/plan-editor/plan-editor.compon
 import { RecipeCardComponent } from './components/recipe-card/recipe-card.component';
 import { RecipeModalComponent } from './components/recipe-modal/recipe-modal.component';
 import { RecipeIngredientPipe } from './pipes/recipe-ingredients/recipe-ingredient.pipe';
+
+const lwaId = 'amzn1.application-oa2-client.7b2fcaa8dce647a99cdc25328bc21518';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,7 @@ import { RecipeIngredientPipe } from './pipes/recipe-ingredients/recipe-ingredie
     BrowserAnimationsModule,
     DragulaModule.forRoot(),
     HttpClientModule,
+    NgxLoginWithAmazonButtonModule.forRoot(lwaId),
     ReactiveFormsModule,
   ],
   providers: [],

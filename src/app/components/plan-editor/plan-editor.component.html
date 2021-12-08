@@ -12,10 +12,14 @@
   <div class="column is-one-third-desktop">
     <div class="panel">
       <div class="panel-heading" i18n>Shopping list</div>
-      <div dragula="list" [(dragulaModel)]="list">
+      <span dragula="list" [(dragulaModel)]="list">
         <label class="panel-block" *ngFor="let recipeIngredient of list">
-          <input type="checkbox" disabled> {{recipeIngredient | recipeIngredient}}
+          {{recipeIngredient | recipeIngredient}}
         </label>
+      </span>
+      <div class="panel-block">
+        <button class="button is-primary is-outlined is-fullwidth" i18n (click)="onClick()">Add to Alexa</button>
+        <lwa-button #button (authorize)="onAuthorize($event)" hidden></lwa-button>
       </div>
     </div>
   </div>
